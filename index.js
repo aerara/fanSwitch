@@ -11,5 +11,5 @@ app.get('/', function(req, res){
 app.use(express.static('public'));
 
 http.listen(port, function(){
-  app.listen(process.env.PORT);
+  console.log('listening on *: ' + port);
 });
