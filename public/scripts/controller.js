@@ -31,6 +31,16 @@ function disconnectFunc(){
 function publishFunc(){
   // console.log("publish");
   // client.publish("mqtt/demo", "hello world!");
+  client.publish(document.getElementById('pub-topic').value, document.getElementById('pub-payload').value)
+  // console.log("Published { topic: " + document.getElementById('pub-topic').value + "; payload: " + document.getElementById('pub-payload').value + " }");
+  displayMessage("Published { topic: " + document.getElementById('pub-topic').value + "; payload: " + document.getElementById('pub-payload').value + " }");
+  // console.log(document.getElementById('pub-topic').value);
+  // console.log(document.getElementById('pub-payload').value);
+}
+
+function unpublishFunc(){
+  // console.log("publish");
+  // client.publish("mqtt/demo", "hello world!");
   client.unpublish(document.getElementById('pub-topic').value, document.getElementById('pub-payload').value)
   // console.log("Published { topic: " + document.getElementById('pub-topic').value + "; payload: " + document.getElementById('pub-payload').value + " }");
   displayMessage("Unpublished { topic: " + document.getElementById('pub-topic').value + "; payload: " + document.getElementById('pub-payload').value + " }");
