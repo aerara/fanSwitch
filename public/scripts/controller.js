@@ -44,6 +44,7 @@ function displayMessage(message) {
   node.appendChild(textnode);
   document.getElementById("messages").appendChild(node);
 }
+
 // // advance functionalities
 // client = mqtt.connect("ws://broker.hivemq.com:8000/mqtt")
 // client.subscribe("mqtt/demo", function (err){

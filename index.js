@@ -10,7 +10,7 @@ app.get('/', function(req, res){
 
 app.use(express.static('public'));
 
-app.listen(process.env.PORT);
-// http.listen(port, function(){
-//   console.log('listening on *: ' + port);
-// });
+// app.listen(process.env.PORT);
+http.listen(port, function(){
+  console.log('listening on *: ' + port);
+});

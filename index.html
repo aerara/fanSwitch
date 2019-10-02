@@ -8,23 +8,23 @@
   <p>My MQTT Web App</p>
   Broker: <input id="broker" value="wss://test.mosquitto.org:8081/mqtt">
   <!-- Broker: <input id="broker" value="ws://broker.hivemq.com:8000/mqtt"> -->
-  <br>
   <button id="connect" onclick="connectFunc()">Connect</button>
   <br>
   <br>
-  Topic: <input id="pub-topic" value="cloud">
+  Topic: <input id="pub-topic" placeholder = "Topic">
   <br>
-  Payload: <input id="pub-payload" value="strife">
+  Payload: <input id="pub-payload" placeholder = "Payload">
   <br>
   <button id="publish" onclick="publishFunc()">Publish</button>
   <br>
   <br>
-  Topic: <input id="sub-topic" value="cloud">
-  <br>
+  Topic: <input id="sub-topic" placeholder = "Topic">
   <button id="subscribe" onclick="subscribeFunc()">Subscribe</button>
-  <div>
+  <br>
+  <br>
+  <center><div>
     <ul id="messages"></ul>
-  </div>
+  </div></center>
 </body>
 <script src="scripts/browser-mqtt.js"></script>
 <script src="scripts/controller.js"></script>
