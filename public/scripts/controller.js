@@ -52,11 +52,8 @@ function subscribeFunc(){
   // console.log("subscribe");
   // client.subscribe("mqtt/demo");
   client.subscribe(document.getElementById('sub-topic').value);
-  client.subscribe(document.getElementById('off').value);
   // console.log("Subscribe { topic: " + document.getElementById('sub-topic').value + " }");
-  if (client.subscribe(document.getElementById('sub-topic').value === client.subscribe(document.getElementById('off').value))){
-    displayMessage("Received { topic: " + document.getElementById('off').value + " }")
-  }
+    displayMessage("Subscribe { topic: " + document.getElementById('sub-topic').value + " }")
 }
 
 // function unsubscribeFunc(){
@@ -69,10 +66,15 @@ function subscribeFunc(){
 
 function off(){
   document.getElementById("messages").innerHTML = "The fan is currently turned off";
+  client.subscribe(document.getElementById('off').value);
+  displayMessage("Subscribe { topic: " + document.getElementById('off').value + " }")
 }
 
 function uno(){
   document.getElementById("messages").innerHTML = "The fan is currently turned on at 1";
+  client.subscribe(document.getElementById('off').value);
+  displayMessage("Subscribe { topic: " + document.getElementById('off').value + " }")
+
 }
 
 function dos(){ 
