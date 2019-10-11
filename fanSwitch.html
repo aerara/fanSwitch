@@ -2,17 +2,18 @@
 
 <head>
   <title>mows</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="index.css">
   <!-- <link rel="javascript" href="fanSwitch.js"> -->
 </head>
 
 <body>
   <h1>IOT Fan Switch</h1>
-  <p id = "messages">The fan is currently turned off</p>
-  <button id="off" onclick="off()" value="The fan is currently turned off">OFF</button>
-  <button id="uno" onclick="uno()" value="The fan is currently turned on at 1">1</button>
-  <button id="dos" onclick="dos()" value="The fan is currently turned on at 2">2</button>
-  <button id="tris" onclick="tris()" value="The fan is currently turned on at 3">3</button>
+  <p>The fan is turned off</p>
+  <button value="off">OFF</button>
+  <button value="at 1">1</button>
+  <button value="at 2">2</button>
+  <button value="at 3">3</button>
   <center>
   </center>
   <script src="scripts/browser-mqtt.js"></script>
